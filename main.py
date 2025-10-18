@@ -1,4 +1,3 @@
-
 from fiverr_analyzer import DeepFiverrAnalyzer
 import pandas as pd
 import json
@@ -39,63 +38,6 @@ def main():
             print("Please check your internet connection and try again.")
             print("You can also try using fewer keywords.")
 
-def fallback_analysis(service_details):
-    """Provide fallback analysis when main analysis fails"""
-    from gig_optimizer import AdvancedGigOptimizer
-    
-    print("🔄 Running fallback analysis with template data...")
-    
-    # Create template keyword data
-    keyword_data = [
-        {
-            'keyword': service_details['service_type'],
-            'gig_count': 75,
-            'avg_price': 55.0,
-            'search_volume_estimate': 350,
-            'competition_score': 6,
-            'conversion_potential': 7.5,
-            'trend_score': 1.5,
-            'comprehensive_score': 8.2
-        },
-        {
-            'keyword': f"professional {service_details['service_type']}",
-            'gig_count': 45,
-            'avg_price': 75.0,
-            'search_volume_estimate': 280,
-            'competition_score': 4,
-            'conversion_potential': 8.0,
-            'trend_score': 1.8,
-            'comprehensive_score': 8.5
-        },
-        {
-            'keyword': f"expert {service_details['service_type']}",
-            'gig_count': 35,
-            'avg_price': 85.0,
-            'search_volume_estimate': 220,
-            'competition_score': 3,
-            'conversion_potential': 8.5,
-            'trend_score': 1.6,
-            'comprehensive_score': 8.8
-        }
-    ]
-    
-    df = pd.DataFrame(keyword_data)
-    
-    # Create gig content
-    gig_optimizer = AdvancedGigOptimizer()
-    gig_content = gig_optimizer.create_high_converting_gig(
-        df, 
-        service_details, 
-        {}  # Empty competitor insights
-    )
-    
-    return {
-        'keyword_analysis': df,
-        'gig_content': gig_content,
-        'competitor_insights': {},
-        'service_details': service_details
-    }
-
 def get_service_details():
     """Get comprehensive service details from user"""
     print("\n📝 SERVICE INFORMATION")
@@ -130,7 +72,7 @@ def get_service_details():
         'target_audience': target_audience,
         'additional_keywords': additional_keywords,
         'unique_selling_points': unique_selling_points,
-        'experience_level': 'professional'  # Can be customized
+        'experience_level': 'professional'
     }
 
 def get_default_keywords(service_type):
@@ -244,5 +186,80 @@ def display_comprehensive_results(results):
     print("\nImplement these recommendations and watch your gig grow!")
     print("Remember: Consistency and quality service are key to long-term success.")
 
+def fallback_analysis(service_details):
+    """Provide fallback analysis when main analysis fails"""
+    from gig_optimizer import AdvancedGigOptimizer
+    
+    print("🔄 Running fallback analysis with template data...")
+    
+    # Create template keyword data
+    keyword_data = [
+        {
+            'keyword': service_details['service_type'],
+            'gig_count': 75,
+            'avg_price': 55.0,
+            'search_volume_estimate': 350,
+            'competition_score': 6,
+            'conversion_potential': 7.5,
+            'trend_score': 1.5,
+            'comprehensive_score': 8.2
+        },
+        {
+            'keyword': f"professional {service_details['service_type']}",
+            'gig_count': 45,
+            'avg_price': 75.0,
+            'search_volume_estimate': 280,
+            'competition_score': 4,
+            'conversion_potential': 8.0,
+            'trend_score': 1.8,
+            'comprehensive_score': 8.5
+        },
+        {
+            'keyword': f"expert {service_details['service_type']}",
+            'gig_count': 35,
+            'avg_price': 85.0,
+            'search_volume_estimate': 220,
+            'competition_score': 3,
+            'conversion_potential': 8.5,
+            'trend_score': 1.6,
+            'comprehensive_score': 8.8
+        }
+    ]
+    
+    df = pd.DataFrame(keyword_data)
+    
+    # Create gig content
+    gig_optimizer = AdvancedGigOptimizer()
+    gig_content = gig_optimizer.create_high_converting_gig(
+        df, 
+        service_details, 
+        {}  # Empty competitor insights
+    )
+    
+    return {
+        'keyword_analysis': df,
+        'gig_content': gig_content,
+        'competitor_insights': {},
+        'service_details': service_details
+    }
+
+def open_results_viewer():
+    """Open the results viewer GUI"""
+    try:
+        from results_viewer import main as viewer_main
+        viewer_main()
+    except ImportError:
+        print("Results viewer not available. Make sure results_viewer.py is in the same directory.")
+    except Exception as e:
+        print(f"Error opening results viewer: {e}")
+
 if __name__ == "__main__":
+    # Run main analysis first
     main()
+    
+    # After analysis, ask if user wants to view in GUI
+    print("\n" + "=" * 60)
+    view_gui = input("Would you like to view the results in a GUI? (y/n): ").lower().strip()
+    
+    if view_gui == 'y':
+        open_results_viewer()
