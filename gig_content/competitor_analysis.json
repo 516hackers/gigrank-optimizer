@@ -1,1 +1,32 @@
-
+{
+  "common_title_words": {
+    "looking": 1,
+    "hire": 1
+  },
+  "pricing_benchmarks": {
+    "min_price": 50,
+    "max_price": 50,
+    "avg_price": 50.0,
+    "median_price": 50
+  },
+  "recommended_price_range": {
+    "low": 40.0,
+    "medium": 50.0,
+    "high": 60.0
+  },
+  "top_performer_characteristics": {
+    "avg_title_length": 8.333333333333334,
+    "common_seller_levels": {
+      "New Seller": 3
+    },
+    "delivery_times": [
+      "2 days",
+      "2 days",
+      "2 days"
+    ],
+    "price_range": {
+      "min": 50,
+      "max": 50
+    }
+  }
+}
