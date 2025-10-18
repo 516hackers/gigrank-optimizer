@@ -1,1 +1,41 @@
 
+{
+  "analysis_summary": {
+    "service_analyzed": "website design",
+    "total_keywords_researched": 10,
+    "top_keyword": "fast website design",
+    "top_keyword_score": 4.325000000000001,
+    "competition_level": "Low",
+    "recommended_starting_price": 40.0,
+    "market_opportunity_score": 5.12
+  },
+  "key_recommendations": [
+    "Focus on 'fast website design' - Highest potential (Score: 4.33)",
+    "Price competitively: $50-$50 range",
+    "Low competition - Great opportunity for quick ranking",
+    "Use all 5 tag slots with relevant keywords",
+    "Include professional gig images and video",
+    "Offer multiple package options",
+    "Respond to messages within 2 hours",
+    "Ask satisfied clients for reviews"
+  ],
+  "success_metrics": {
+    "estimated_impressions_per_month": 13,
+    "potential_clicks_per_month": 2,
+    "expected_conversion_rate": "2-5%",
+    "average_order_value": "$100.00",
+    "time_to_first_order": "1-2 weeks with proper optimization"
+  },
+  "implementation_checklist": [
+    "Choose best title from recommendations",
+    "Use optimized description template",
+    "Set up all 3 package tiers",
+    "Add professional gig images",
+    "Create portfolio items",
+    "Set competitive pricing",
+    "Use all 5 recommended tags",
+    "Prepare quick response templates",
+    "Enable notifications for messages",
+    "Promote gig on social media initially"
+  ]
+}
