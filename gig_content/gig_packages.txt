@@ -1,1 +1,36 @@
+RECOMMENDED PACKAGES:
+==================================================
 
+BASIC PACKAGE - $40.0
+Delivery: 3 days
+Description: Perfect for small projects and basic needs
+Features:
+  • Basic service delivery
+  • Standard quality work
+  • 1 revision included
+  • Source files provided
+  • Email support
+
+STANDARD PACKAGE - $50.0
+Delivery: 2 days
+Description: Most popular choice for professional results
+Features:
+  • Enhanced service delivery
+  • High quality standards
+  • 3 revisions included
+  • Source files provided
+  • Priority support
+  • Commercial use license
+
+PREMIUM PACKAGE - $60.0
+Delivery: 1 day
+Description: Complete solution for complex requirements
+Features:
+  • Full service delivery
+  • Premium quality guarantee
+  • Unlimited revisions
+  • Source files provided
+  • 24/7 priority support
+  • Commercial use license
+  • Rush delivery option
+  • Dedicated project manager
